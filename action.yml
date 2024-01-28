@@ -1,0 +1,22 @@
+name: "Get details"
+description: "Get info about the user and content"
+inputs:
+  name: # id of input
+    description: "Who to greet"
+    required: true
+    default: "World"
+  topic:
+    description: "Topic which you will publish on"
+    required: true
+    default: "New topic"
+  secret:
+    description: "secret key"
+    required: true
+outputs:
+  time: # id of output
+    description: "The time we greeted you"
+  message:
+    description: "Output message after request"
+runs:
+  using: "node20"
+  main: "index.js"
