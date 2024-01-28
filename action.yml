@@ -1,22 +1,25 @@
-name: "Get details"
-description: "Get info about the user and content"
+name: "Example hashnode"
+description: "Publish to hashnode via github action"
+author: "Raunak Gurud"
+branding:
+  icon: "upload"
+  color: "blue"
 inputs:
-  name: # id of input
-    description: "Who to greet"
+  title: # id of input
+    description: "Title of the new blog"
     required: true
-    default: "World"
-  topic:
-    description: "Topic which you will publish on"
+  files:
+    description: "Path to the files uploaded"
     required: true
-    default: "New topic"
-  secret:
-    description: "secret key"
+    default: "Posts/**/*.md"
+  hashnode_key:
+    description: "secret key by hashnode"
     required: true
 outputs:
-  time: # id of output
-    description: "The time we greeted you"
-  message:
-    description: "Output message after request"
+  result_json:
+    description: "Publish result as a JSON string"
+  result_summary:
+    description: "Publish result summary formatted as text"
 runs:
   using: "node20"
   main: "index.js"
