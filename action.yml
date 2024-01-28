@@ -10,7 +10,6 @@ inputs:
     required: true
   files:
     description: "Path to the files uploaded"
-    required: true
     default: "Posts/**/*.md"
   hashnode_key:
     description: "secret key by hashnode"

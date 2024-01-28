@@ -10,6 +10,7 @@ async function run() {
 
     core.setSecret(hashnode_key);
 
+    core.log('welcome to this action')
     core.debug(
       JSON.stringify({
         title,
@@ -27,7 +28,7 @@ async function run() {
     });
 
     const output = results.map((r) => {
-      console.log(r);
+      console.log("r:", r);
     });
 
     const json = JSON.stringify(output, null, 2);
@@ -36,10 +37,9 @@ async function run() {
 
     const summary = `output length: ${output.length}`;
     core.setOutput("result_summary", summary);
-    
+
     // const payload = JSON.stringify(github.context.payload, undefined, 2);
     // Get the JSON webhook payload for the event that triggered the workflow
-    
   } catch (error) {
     core.setFailed(error.message);
   }
