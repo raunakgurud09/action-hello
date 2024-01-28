@@ -9,15 +9,15 @@ try {
 
   console.log(`Hello ${name}!`);
   const time = new Date().toTimeString();
-  
+
   const message = `New blog published on topic ${topic} received your key ${secret}`;
+  console.log(`${message}`)
 
   core.setOutput("time", time);
   core.setOutput("message", message);
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2);
 
-  console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
