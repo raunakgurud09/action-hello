@@ -10,7 +10,7 @@ async function run() {
 
     core.setSecret(hashnode_key);
 
-    core.log('welcome to this action')
+    console.log('welcome to this action')
     core.debug(
       JSON.stringify({
         title,
