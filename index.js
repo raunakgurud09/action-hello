@@ -11,6 +11,7 @@ async function run() {
     core.setSecret(hashnode_key);
 
     console.log('welcome to this action')
+    console.log(process.env.HASHNODE_KEY)
     core.debug(
       JSON.stringify({
         title,
